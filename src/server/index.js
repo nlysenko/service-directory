@@ -6,7 +6,6 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     router = require('./routes/servise_directori_routes');
 
-
 var app = express();
 
 app.use('/static', express.static(path.join(__dirname, '..', '..', '/static')));
@@ -20,14 +19,6 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(cookieParser());
 
 app.use('/', router);
-
-app.use(require('node-sass-middleware')({
-    src: path.join(__dirname, '..', 'client', 'stylesheets'),
-    dest: path.join(__dirname, '..', '..', 'static', 'stylesheets'),
-    indentedSyntax: true,
-    outputStyle: true,
-    sourceMap: true
-}));
 
 var server = http.createServer(app);
 
