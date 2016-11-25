@@ -1,22 +1,22 @@
-.wrapper
-    header.page-header
-        .container-header
-            .logo
-                a(href='#')
-                    img(src='/static/images/logo.png')
-            .search
-                .company-name
-                    .input-group-btn
-                        input.input-search(type='text', placeholder='Company Name')
-                        button.btn-search
-                            img(src='/static/images/btn-search.png')
-                a.chat-link(href='#')
-                    img(src='/static/images/chat.png')
-                a.notifications-link(href='#')
-                    img(src='/static/images/notifications.png')
-                a.settings-link(href='#')
-                    img(src='/static/images/settings.png')
-            .users(ng-controller='getUserCtrl')
-                .user-img
-                    img(src='{{ getUser.photo }}')
-                select.selected-user(ng-model='getUser', ng-options='user.name for user in users')
+
+header.page-header
+    .container-header
+        .logo
+            a(href='#')
+                img(src='/static/images/logo.png')
+        .search
+            .company-name
+                .input-group-btn
+                    input.input-search(type='text', placeholder='Company Name')
+                    button.btn-search
+                        img(src='/static/images/btn-search.png')
+            a.chat-link(href='#')
+                img(src='/static/images/chat.png')
+            a.notifications-link(href='#')
+                img(src='/static/images/notifications.png')
+            a.settings-link(href='#')
+                img(src='/static/images/settings.png')
+        .users(ng-controller='getUserCtrl')
+            .user-img
+                img(src='{{ getUser.photo }}')
+            select.selected-user(ng-model='getUser', ng-options='user.name for user in users')
