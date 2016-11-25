@@ -8,19 +8,19 @@ gulp.task('build:css', function() {
 });
 
 gulp.task('build:js', function() {
-        return gulp.src([
+    return gulp.src([
             'node_modules/angular/angular.js',
             'src/client/javascripts/app.js',
-            'src/client/javascripts/controllers/main_controller.js'
-            ])
-            .pipe(concat('index.js'))
-            .pipe(gulp.dest('static/javascripts/'));
+            'src/client/javascripts/controllers/get_user_controller.js'
+        ])
+        .pipe(concat('index.js'))
+        .pipe(gulp.dest('static/javascripts/'));
 });
 
-gulp.task('watch:css', function(){
+gulp.task('watch:css', function() {
     gulp.watch('src/client/stylesheets/*.sass', ['build:css']);
 });
 
-gulp.task('watch:js', function(){
+gulp.task('watch:js', function() {
     gulp.watch('src/client/**/*.js', ['build:js']);
 });
