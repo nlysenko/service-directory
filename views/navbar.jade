@@ -17,5 +17,5 @@ header.page-header
                 img(src='/static/images/settings.png')
         .users(ng-controller='getUserCtrl')
             .user-img
-                img(src='{{ getUser.photo }}')
-            select.selected-user(ng-model='getUser', ng-options='user.name for user in users')
+                img(ng-src='{{ getUser.photo }}')
+            span.user-name(ng-bind='getUser.name')

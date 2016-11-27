@@ -94,24 +94,17 @@ a
     height: 100%
     float: right
 
-.selected-user
-    border: none
-    padding-bottom: 4px
-    background-color: $backgoundHeader
-    font-size: 16px
-    color: $user
-    margin-top: 23px
-    font-family: $basic_font
-
-.selected-user:focus
-    outline: none
-
-.selected-user > option
+.user-name
     font-size: 16px
     color: $user
     font-family: $basic_font
+    float: left
+    display: block
+    margin-top: 26px
+    margin-left: 10px
 
 .user-img
+    display: block
     width: 40px
     float: left
     line-height: 68px
@@ -128,6 +121,7 @@ a
 
 .sidebar-left
     width: 212px
+    float: left
 
 .navigation-link
     height: 51px
@@ -164,9 +158,8 @@ a
 .featured-companies-head
     padding-top: 10px
 
-.featured-companies-head span
+.featured-companies-head a
     float: right
-    cursor: pointer
     color: $main-black
     font-family: $basic_font
     font-size: 14px
@@ -227,3 +220,11 @@ a
 
 .policy-link
     margin-left: 20px
+
+.sidebar-right
+    float: left
+    width: 213px
+
+.category
+    width: calc(100% - 425px)
+    float: left
