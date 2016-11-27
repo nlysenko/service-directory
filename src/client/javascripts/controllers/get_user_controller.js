@@ -3,10 +3,6 @@ ServiceDirectoryModule.controller('getUserCtrl', ['$scope', function($scope) {
         {
             name: 'Maximillian Beekeeper',
             photo: '/static/images/user.png'
-        },
-        {
-            name: 'Other User',
-            photo: '/static/images/user-test.png'
         }
     ];
 

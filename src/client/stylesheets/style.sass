@@ -94,31 +94,24 @@ a
     height: 100%
     float: right
 
-.selected-user
-    border: none
-    padding-bottom: 4px
-    background-color: $backgoundHeader
-    font-size: 16px
-    color: $user
-    margin-top: 23px
-    font-family: $basic_font
-
-.selected-user:focus
-    outline: none
-
-.selected-user > option
+.user-name
     font-size: 16px
     color: $user
     font-family: $basic_font
+    float: left
+    display: block
+    margin-top: 26px
+    margin-left: 10px
 
 .user-img
+    display: block
     width: 40px
     float: left
     line-height: 68px
 
     img
         vertical-align: middle
-        border-radius: 5px
+        border-radius: 4px
 
 .wrapper
     margin-top: 80px
@@ -128,6 +121,7 @@ a
 
 .sidebar-left
     width: 212px
+    float: left
 
 .navigation-link
     height: 51px
@@ -150,7 +144,6 @@ a
     font-size: 14px
     color: $main-blue
     font-family: $basic_font
-    margin-top: 10px
     margin-bottom: 15px
 
 .advertisement a
@@ -164,14 +157,13 @@ a
 .featured-companies-head
     padding-top: 10px
 
-.featured-companies-head span
+.all-link
     float: right
-    cursor: pointer
     color: $main-black
     font-family: $basic_font
     font-size: 14px
 
-.featured-companies-head p
+.head-block
     color: $main-blue
     font-family: $basic_font
     font-size: 14px
@@ -184,18 +176,20 @@ a
     width: 80px
     height: 80px
     float: left
-    border-radius: 6px
+    border-radius: 4px
     margin-right: 8px
 
 .companies p
     margin-bottom: 2px
 
-.comp-name
+.name
     font-size: 16px
     font-family: $basic_font
     color: $main-black
 
-.name-location
+.comp-name,
+.location,
+.product-info
     font-size: 14px
     font-family: $basic_font
     color: $main-blue
@@ -227,3 +221,59 @@ a
 
 .policy-link
     margin-left: 20px
+
+.sidebar-right
+    float: left
+    width: 213px
+
+    .advertisement
+        padding-top: 15px
+
+.category
+    width: calc(100% - 425px)
+    float: left
+
+.dentist-photo,
+.product-img
+    border-radius: 4px
+
+.people-img,
+.product-img
+    margin-right: 8px
+    float: left
+
+.dentists
+    height: 402px
+    padding-top: 5px
+
+    .head-block
+        margin-bottom: 15px
+
+.people
+    height: 125px
+
+    p
+        margin-bottom: 5px
+
+.product-img
+    width: 80px
+    height: 80px
+
+.product-first
+    background: url(/static/images/product-first.png) no-repeat -22px
+
+.product-second
+    background: url(/static/images/product-second.png) no-repeat -27px
+
+.products
+    height: 280px
+    padding-top: 15px
+
+    .head-block
+        margin-bottom: 15px
+
+.product
+    height: 125px
+
+    .name
+        margin-bottom: 5px
