@@ -4,12 +4,11 @@ header.page-header
         .logo
             a(href='#')
                 img(src='/static/images/logo.png')
-        .search
-            .company-name
-                .input-group-btn
-                    input.input-search(type='text', placeholder='Company Name')
-                    button.btn-search
-                        img(src='/static/images/btn-search.png')
+        .search-block
+            .search
+                form.fsearch
+                    input.search-btn(type='button')
+                    input.search-txt(type='text', placeholder='Company Name')
             a.chat-link(href='#')
                 img(src='/static/images/chat.png')
             a.notifications-link(href='#')
