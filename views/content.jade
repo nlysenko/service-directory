@@ -33,7 +33,7 @@
                     p.location Belgrade, Serbia
                     a.follow(href='#') Follow Now
                 .companies
-                    .servise-provider
+                    .service-provider
                     p.name Company Name
                     p.comp-name Service Provider
                     p.location New York, USA
@@ -50,8 +50,15 @@
                 div
                     a(href='#') Terms of use
                     a.policy-link(href='#') Privacy Policy
-        .category
-            h1 Servise Directory
+        .category(ng-controller='serviceDirectoryCtrl')
+            h1 Service Directory
+            button.new-service-btn Add New Service
+            ul.services
+                li.icon-block(ng-repeat='service in services')
+                    a.service-link(href='#')
+                        .icon
+                            img(ng-src='{{ service.src }}')
+                        span.service-name(ng-bind='service.name')
         .sidebar-right
             .dentists
                 p.head-block People you may know
