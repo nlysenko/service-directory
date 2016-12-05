@@ -21,8 +21,14 @@ a
     width: 100%
     z-index: 10000
 
+.container-header,
+.container
+    margin: 0 auto
+    max-width: 1440px
+    min-width: 970px
+    padding: 0 15px
+
 .container-header
-    margin: 0 15px
     height: 100%
 
 .logo
@@ -30,26 +36,41 @@ a
     height: 100%
     float: left
 
-    a
-        display: block
-        width: 130px
-        height: 40px
-        padding-top: 10px
+.logo-link
+    display: block
+    width: 130px
+    height: 40px
+    margin-top: 10px
 
 .search-block
     width: calc(100% - 375px)
-    height: 100%
+    line-height: 68px
     float: left
-
-    a
-        display: block
-        float: left
 
 .search
-    width: 434px
+    vertical-align: middle
+    width: 46%
     height: 34px
-    float: left
-    margin: 17px 0 0 15px
+    margin-left: 15px
+    margin-right: 25px
+    display: inline-block
+
+.navbar-links
+    display: inline-block
+    width: 26px
+    height: 24px
+    vertical-align: middle
+    margin-left: 5px
+    margin-right: 5px
+
+.chat
+    background: url('/static/images/chat.png') no-repeat 0 2px
+
+.notif
+    background: url('/static/images/notifications.png') no-repeat 2px
+
+.settings
+    background: url('/static/images/settings.png') no-repeat 2px 2px
 
 .fsearch
     height: 100%
@@ -66,9 +87,10 @@ a
     cursor: pointer
 
 .search-txt
-    width: 400px
+    width: calc(100% - 34px)
     height: 100%
     border: none
+    float: left
     background-color: $backgoundSearch
     border-radius: 0 4px 4px 0
     font-family: $basic_font
@@ -80,74 +102,68 @@ a
 .search-txt:focus
     outline: none
 
-.chat-link
-    margin: 23px 18px 0 30px
-
-.notifications-link
-    margin: 22px 18px 0 0
-
-.settings-link
-    margin-top: 24px
-
 .users
     width: 213px
-    height: 100%
+    line-height: 68px
     float: right
 
-.user-name
+.user-img-b,
+.user-txt-b
+    vertical-align: middle
+    display: inline-block
+
+.user-img-b
+    margin-right: 10px
+
+.user-img-link
+    display: block
+    width: 40px
+    height: 40px
+
+.user-txt-link
     font-size: 16px
     color: $user
     font-family: $basic_font
-    float: left
-    display: block
-    margin-top: 26px
-    margin-left: 10px
 
 .user-img
-    display: block
-    width: 40px
-    float: left
-    line-height: 68px
-
-    img
-        vertical-align: middle
-        border-radius: 4px
+    border-radius: 4px
 
 .wrapper
     margin-top: 80px
-
-.container
-    margin: 0 15px
 
 .sidebar-left
     width: 212px
     float: left
 
+.navigation
+    height: 200px
+
+.navigation-links
+    height: 50px
+
+.navigation-link-img
+    display: inline-block
+    width: 50px
+
 .navigation-link
-    height: 51px
-
-    a
-        float: left
-        width: 26px
-        margin-right: 25px
-
-.navigation-text
+    display: inline-block
     color: $navigation
     font-size: 16px
     font-family: $basic_font
-    padding-top: 2px
+    vertical-align: top
+    margin-top: 4px
 
 .advertisement
     height: 377px
 
-.advertisement p
+.adv-header
     font-size: 14px
     color: $main-blue
     font-family: $basic_font
     margin-bottom: 15px
 
-.advertisement a
-    font-size: 11px
+.adv-link
+    font-size: 12px
     color: $lightgrey
     font-family: $basic_font
 
@@ -173,20 +189,18 @@ a
     height: 80px
     margin-top: 20px
 
-.companies div
+.company
     width: 80px
     height: 80px
     float: left
     border-radius: 4px
     margin-right: 8px
 
-.companies p
-    margin-bottom: 2px
-
 .name
     font-size: 16px
     font-family: $basic_font
     color: $main-black
+    margin-bottom: 2px
 
 .comp-name,
 .location,
@@ -194,6 +208,7 @@ a
     font-size: 14px
     font-family: $basic_font
     color: $main-blue
+    margin-bottom: 2px
 
 .follow
     font-family: $basic_font
@@ -209,30 +224,22 @@ a
 .supplier
     background: url('/static/images/supplier.png') no-repeat -5px
 
-.featured-companies-links
-    height: 60px
-
-.featured-companies-links a
-    font-family: $basic_font
-    color: $lightgrey
-    font-size: 12px
-
-.featured-companies-links div
+.comp-link
     margin-top: 10px
 
 .policy-link
     margin-left: 20px
 
+.category
+    width: calc(100% - 425px)
+    float: left
+
 .sidebar-right
     float: left
     width: 213px
 
-    .advertisement
-        padding-top: 15px
-
-.category
-    width: calc(100% - 425px)
-    float: left
+.sidebar-right .advertisement
+    padding-top: 15px
 
 .dentist-photo,
 .product-img
@@ -254,8 +261,8 @@ a
 .people
     height: 125px
 
-    p
-        margin-bottom: 5px
+.people-mb
+    margin-bottom: 4px
 
 .product-img
     width: 80px
@@ -324,8 +331,8 @@ a
     line-height: 140px
     margin-bottom: 15px
 
-    img
-        vertical-align: middle
+.icon-img
+    vertical-align: middle
 
 .service-name
     font-size: 16px

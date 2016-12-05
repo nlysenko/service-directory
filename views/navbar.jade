@@ -2,20 +2,19 @@
 header.page-header
     .container-header
         .logo
-            a(href='#')
+            a.logo-link(href='#')
                 img(src='/static/images/logo.png')
         .search-block
             .search
                 form.fsearch
                     input.search-btn(type='button')
                     input.search-txt(type='text', placeholder='Company Name')
-            a.chat-link(href='#')
-                img(src='/static/images/chat.png')
-            a.notifications-link(href='#')
-                img(src='/static/images/notifications.png')
-            a.settings-link(href='#')
-                img(src='/static/images/settings.png')
+            a.navbar-links.chat(href='#')
+            a.navbar-links.notif(href='#')
+            a.navbar-links.settings(href='#')
         .users(ng-controller='getUserCtrl')
-            .user-img
-                img(ng-src='{{ getUser.photo }}')
-            span.user-name(ng-bind='getUser.name')
+            .user-img-b
+                a.user-img-link(href='#')
+                    img.user-img(ng-src='{{ getUser.photo }}')
+            .user-txt-b
+                a.user-txt-link(href='#', ng-bind='getUser.name')
