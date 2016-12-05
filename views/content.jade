@@ -2,54 +2,58 @@
     .container
         .sidebar-left
             .navigation
-                .navigation-link
-                    a.feed-link(href='#')
-                        img(src='/static/images/feed.png')
-                    p.navigation-text Feed
-                .navigation-link
-                    a.ask-link(href='#')
-                        img(src='/static/images/ask.png')
-                    p.navigation-text Ask a Colleague
-                .navigation-link
-                    a.companies-link(href='#')
-                        img(src='/static/images/companies.png')
-                    p.navigation-text Service
-                .navigation-link
-                    a.services-link(href='#')
-                        img(src='/static/images/services.png')
-                    p.navigation-text Service Directory
+                .navigation-links
+                    .navigation-link-img
+                        a(href='#')
+                            img(src='/static/images/feed.png')
+                    a.navigation-link(href='#') Feed
+                .navigation-links
+                    .navigation-link-img
+                        a(href='#')
+                            img(src='/static/images/ask.png')
+                    a.navigation-link(href='#') Ask a Colleague
+                .navigation-links
+                    .navigation-link-img
+                        a(href='#')
+                            img(src='/static/images/companies.png')
+                    a.navigation-link(href='#') Service
+                .navigation-links
+                    .navigation-link-img
+                        a(href='#')
+                            img(src='/static/images/services.png')
+                    a.navigation-link(href='#') Service Directory
             .advertisement
-                p Advertisement
+                .adv-header.adv-bottom Advertisement
                 img(src='static/images/three-stars.png')
-                a(href='#') As By Dentiz.com
+                a.adv-link(href='#') As By Dentiz.com
             .featured-companies
                 .featured-companies-head
-                    p.head-block Featured companies
+                    .head-block Featured companies
                         a.all-link(href='#') See All
                 .companies
-                    .manufacturer
-                    p.name Company Name
-                    p.comp-name Manufacturer
-                    p.location Belgrade, Serbia
+                    .company.manufacturer
+                    .name Company Name
+                    .comp-name Manufacturer
+                    .location Belgrade, Serbia
                     a.follow(href='#') Follow Now
                 .companies
-                    .service-provider
-                    p.name Company Name
-                    p.comp-name Service Provider
-                    p.location New York, USA
+                    .company.service-provider
+                    .name Company Name
+                    .comp-name Service Provider
+                    .location New York, USA
                     a.follow(href='#') Follow Now
                 .companies
-                    .supplier
-                    p.name Company Name
-                    p.comp-name Supplier
-                    p.location London, England
+                    .company.supplier
+                    .name Company Name
+                    .comp-name Supplier
+                    .location London, England
                     a.follow(href='#') Follow Now
-            .featured-companies-links
-                div
-                    a(href='#') Denteez Copyright 2015
-                div
-                    a(href='#') Terms of use
-                    a.policy-link(href='#') Privacy Policy
+            .comp-links
+                .comp-link
+                    a.adv-link(href='#') Denteez Copyright 2015
+                .comp-link
+                    a.adv-link(href='#') Terms of use
+                    a.adv-link.policy-link(href='#') Privacy Policy
         .category(ng-controller='serviceDirectoryCtrl')
             h1 Service Directory
             button.new-service-btn Add New Service
@@ -57,52 +61,52 @@
                 li.icon-block(ng-repeat='service in services')
                     a.service-link(href='#')
                         .icon
-                            img(ng-src='{{ service.src }}')
+                            img.icon-img(ng-src='{{ service.src }}')
                         span.service-name(ng-bind='service.name')
         .sidebar-right
             .dentists
-                p.head-block People you may know
+                .head-block People you may know
                     a.all-link(href='#') See All
                 .people
-                    p.name Dennis Adams
+                    .name.people-mb Dennis Adams
                     .people-img
                         img.dentist-photo(src='/static/images/adams.png')
                     .dentests-info
-                        p.comp-name Dentist (Fractice Owner)
-                        p.location London, England
+                        .comp-name.people-mb Dentist (Fractice Owner)
+                        .location.people-mb London, England
                         a.follow(href='#') Add Frienc
                 .people
-                    p.name Mary Carpenter
+                    .name.people-mb Mary Carpenter
                     .people-img
                         img.dentist-photo(src='/static/images/carpenter.png')
                     .dentests-info
-                        p.comp-name Dentist (Fractice Owner)
-                        p.location Belgrade, Serbia
+                        .comp-name.people-mb Dentist (Fractice Owner)
+                        .location.people-mb Belgrade, Serbia
                         a.follow(href='#') Add Frienc
                 .people
-                    p.name Danielle Salazar
+                    .name.people-mb Danielle Salazar
                     .people-img
                         img.dentist-photo(src='/static/images/salazar.png')
                     .dentests-info
-                        p.comp-name Dentist (Fractice Owner)
-                        p.location Paris, France
+                        .comp-name.people-mb Dentist (Fractice Owner)
+                        .location.people-mb Paris, France
                         a.follow(href='#') Add Frien
             .products
-                p.head-block Featured Products
+                .head-block Featured Products
                     a.all-link(href='#') See All
                 .product
-                    p.name Product Name
+                    .name Product Name
                     .product-img.product-first
                     .product-info-block
-                        p.product-info Product Short Description.
-                        p.product-info The quick brown fox jumps over the laze dcg.
+                        .product-info Product Short Description.
+                        .product-info The quick brown fox jumps over the laze dcg.
                 .product
-                    p.name Product Name
+                    .name Product Name
                     .product-img.product-second
                     .product-info-block
-                        p.product-info Product Short Description.
-                        p.product-info The quick brown fox jumps over the laze dcg.
+                        .product-info Product Short Description.
+                        .product-info The quick brown fox jumps over the laze dcg.
             .advertisement
-                p Advertisement
+                .adv-header Advertisement
                 img(src='static/images/coll.png')
-                a(href='#') As By Dentiz.com
+                a.adv-link(href='#') As By Dentiz.com
