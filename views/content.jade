@@ -61,8 +61,8 @@
                 li.icon-block(ng-repeat='service in services')
                     a.service-link(href='#')
                         .icon
-                            img.icon-img(ng-src='{{ service.src }}')
-                        span.service-name(ng-bind='service.name')
+                            img.icon-img(ng-src='{{ service.icon }}')
+                        span.service-name(ng-bind='service.title')
         .sidebar-right
             .dentists
                 .head-block People you may know
