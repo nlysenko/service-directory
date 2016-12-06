@@ -12,7 +12,8 @@ gulp.task('build:js', function() {
             'node_modules/angular/angular.js',
             'src/client/javascripts/app.js',
             'src/client/javascripts/controllers/get_user_controller.js',
-            'src/client/javascripts/controllers/service_directory_controller.js'
+            'src/client/javascripts/controllers/service_directory_controller.js',
+            'src/client/javascripts/directives/serch_company_directive.js'
         ])
         .pipe(concat('index.js'))
         .pipe(gulp.dest('static/javascripts/'));
