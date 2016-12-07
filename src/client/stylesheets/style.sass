@@ -1,6 +1,7 @@
 @import _colors
 @import _fonts
 @import _mixins
+@import _modal
 
 *
     margin: 0
@@ -172,6 +173,9 @@ a
     font-size: 12px
     color: $lightgrey
     font-family: $basic_font
+
+.active-link:hover
+    color: $active-link
 
 .featured-companies
     height: 350px
@@ -350,4 +354,4 @@ a
     .icon
         background-color: $activeServiceIcon
     .service-name
-        color: $activeServiceSpan
+        color: $active-link

@@ -6,22 +6,22 @@
                     .navigation-link-img
                         a(href='#')
                             img(src='/static/images/feed.png')
-                    a.navigation-link(href='#') Feed
+                    a.navigation-link.active-link(href='#') Feed
                 .navigation-links
                     .navigation-link-img
                         a(href='#')
                             img(src='/static/images/ask.png')
-                    a.navigation-link(href='#') Ask a Colleague
+                    a.navigation-link.active-link(href='#') Ask a Colleague
                 .navigation-links
                     .navigation-link-img
                         a(href='#')
                             img(src='/static/images/companies.png')
-                    a.navigation-link(href='#') Service
+                    a.navigation-link.active-link(href='#') Service
                 .navigation-links
                     .navigation-link-img
                         a(href='#')
                             img(src='/static/images/services.png')
-                    a.navigation-link(href='#') Service Directory
+                    a.navigation-link.active-link(href='#') Service Directory
             .advertisement
                 .adv-header.adv-bottom Advertisement
                 img(src='static/images/three-stars.png')
@@ -29,31 +29,34 @@
             .featured-companies
                 .featured-companies-head
                     .head-block Featured companies
-                        a.all-link(href='#') See All
+                        a.all-link.active-link(href='#') See All
                 .companies
                     .company.manufacturer
-                    .name Company Name
+                    .name
+                        a.name.active-link(href='#') Company Name
                     .comp-name Manufacturer
                     .location Belgrade, Serbia
-                    a.follow(href='#') Follow Now
+                    a.follow.active-link(href='#') Follow Now
                 .companies
                     .company.service-provider
-                    .name Company Name
+                    .name
+                        a.name.active-link(href='#') Company Name
                     .comp-name Service Provider
                     .location New York, USA
-                    a.follow(href='#') Follow Now
+                    a.follow.active-link(href='#') Follow Now
                 .companies
                     .company.supplier
-                    .name Company Name
+                    .name
+                        a.name.active-link(href='#') Company Name
                     .comp-name Supplier
                     .location London, England
-                    a.follow(href='#') Follow Now
+                    a.follow.active-link(href='#') Follow Now
             .comp-links
                 .comp-link
-                    a.adv-link(href='#') Denteez Copyright 2015
+                    p.adv-link Denteez Copyright 2015
                 .comp-link
-                    a.adv-link(href='#') Terms of use
-                    a.adv-link.policy-link(href='#') Privacy Policy
+                    a.adv-link.active-link(href='#') Terms of use
+                    a.adv-link.policy-link.active-link(href='#') Privacy Policy
         .category(ng-controller='serviceDirectoryCtrl')
             h1 Service Directory
             button.new-service-btn Add New Service
@@ -63,45 +66,55 @@
                         .icon
                             img.icon-img(ng-src='{{ service.icon }}')
                         span.service-name(ng-bind='service.title')
+            #openModal.modalDialog
+                div
+                    a.close(href='#close', title='Close') X
+                    h2.error Error: {{ error.status }}
+                    p.error-mes {{ error.description }}
         .sidebar-right
             .dentists
                 .head-block People you may know
-                    a.all-link(href='#') See All
+                    a.all-link.active-link(href='#') See All
                 .people
-                    .name.people-mb Dennis Adams
+                    .people-mb
+                        a.active-link.name(href='#') Dennis Adams
                     .people-img
                         img.dentist-photo(src='/static/images/adams.png')
                     .dentests-info
                         .comp-name.people-mb Dentist (Fractice Owner)
                         .location.people-mb London, England
-                        a.follow(href='#') Add Frienc
+                        a.follow.active-link(href='#') Add Frienc
                 .people
-                    .name.people-mb Mary Carpenter
+                    .people-mb
+                        a.active-link.name(href='#') Mary Carpenter
                     .people-img
                         img.dentist-photo(src='/static/images/carpenter.png')
                     .dentests-info
                         .comp-name.people-mb Dentist (Fractice Owner)
                         .location.people-mb Belgrade, Serbia
-                        a.follow(href='#') Add Frienc
+                        a.follow.active-link(href='#') Add Frienc
                 .people
-                    .name.people-mb Danielle Salazar
+                    .people-mb
+                        a.active-link.name(href='#') Danielle Salazar
                     .people-img
                         img.dentist-photo(src='/static/images/salazar.png')
                     .dentests-info
                         .comp-name.people-mb Dentist (Fractice Owner)
                         .location.people-mb Paris, France
-                        a.follow(href='#') Add Frien
+                        a.follow.active-link(href='#') Add Frien
             .products
                 .head-block Featured Products
-                    a.all-link(href='#') See All
+                    a.all-link.active-link(href='#') See All
                 .product
-                    .name Product Name
+                    .people-mb
+                        a.active-link.name(href='#') Product Name
                     .product-img.product-first
                     .product-info-block
                         .product-info Product Short Description.
                         .product-info The quick brown fox jumps over the laze dcg.
                 .product
-                    .name Product Name
+                    .people-mb
+                        a.active-link.name(href='#') Product Name
                     .product-img.product-second
                     .product-info-block
                         .product-info Product Short Description.
@@ -109,4 +122,4 @@
             .advertisement
                 .adv-header Advertisement
                 img(src='static/images/coll.png')
-                a.adv-link(href='#') As By Dentiz.com
+                a.adv-link.active-link(href='#') As By Dentiz.com

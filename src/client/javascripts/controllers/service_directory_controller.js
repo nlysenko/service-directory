@@ -1,5 +1,6 @@
 ServiceDirectoryModule.controller('serviceDirectoryCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.services = [];
+    $scope.error = {};
 
     var req = {
         method: "GET",
@@ -10,12 +11,20 @@ ServiceDirectoryModule.controller('serviceDirectoryCtrl', ['$scope', '$http', fu
     };
 
     $http(req)
-        .success(function(obj) {
-            if (obj.success === true) {
-                $scope.services = obj.data;
-            };
+        .success(function(data) {
+            if (data.success === true) {
+                $scope.services = data.data;
+            }
         })
         .error(function(data, status) {
-            console.log('Error!');
+            if (status === 401) {
+                $scope.error.status = status;
+                $scope.error.description = data.error.description;
+                document.location.href = "http://localhost:3000/#openModal";
+            } else if (status === 500) {
+                $scope.error.status = status;
+                $scope.error.description = data.error.description;
+                document.location.href = "http://localhost:3000/#openModal";
+            }
         });
 }]);
