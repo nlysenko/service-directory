@@ -1,0 +1,134 @@
+*
+    margin: 0
+    padding: 0
+
+body
+    background-color: $backgroundPage
+
+a
+    text-decoration: none
+
+.wrapper
+    margin-top: 80px
+
+.page-header
+    height: 68px
+    background-color: $backgoundHeader
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 10000
+
+.container-header,
+.container
+    margin: 0 auto
+    max-width: 1440px
+    min-width: 970px
+    padding: 0 15px
+
+.container-header
+    height: 100%
+
+.logo
+    width: 162px
+    height: 100%
+    float: left
+
+.logo-link
+    display: block
+    width: 130px
+    height: 40px
+    margin-top: 10px
+
+.search-block
+    width: calc(100% - 375px)
+    line-height: 68px
+    float: left
+
+.search
+    vertical-align: middle
+    width: 434px
+    height: 34px
+    margin-left: 15px
+    margin-right: 25px
+    display: inline-block
+
+.navbar-links
+    display: inline-block
+    width: 26px
+    height: 24px
+    vertical-align: middle
+    margin-left: 5px
+    margin-right: 5px
+
+.chat
+    background: url('/static/images/chat.png') no-repeat 0 2px
+
+.notif
+    background: url('/static/images/notifications.png') no-repeat 2px
+
+.settings
+    background: url('/static/images/settings.png') no-repeat 2px 2px
+
+.fsearch
+    height: 100%
+    background-color: $backgoundSearch
+    border-radius: 4px
+
+.search-btn
+    float: left
+    height: 100%
+    width: 34px
+    border: none
+    border-radius: 4px 0 0 4px
+    background: url('/static/images/btn-search.png') no-repeat 8px 10px
+    cursor: pointer
+
+.search-txt
+    width: calc(100% - 34px)
+    height: 100%
+    border: none
+    float: left
+    background-color: $backgoundSearch
+    border-radius: 0 4px 4px 0
+    font-family: $basic_font
+    color: $search
+    font-size: 15px
+    text-overflow: ellipsis
+    +search-input-placeholder($search)
+
+.hidden-elem
+    font-family: $basic_font
+    font-size: 15px
+    position: absolute
+    top: -9999px
+
+.search-txt:focus
+    outline: none
+
+.users
+    width: 213px
+    line-height: 68px
+    float: right
+
+.user-img-b,
+.user-txt-b
+    vertical-align: middle
+    display: inline-block
+
+.user-img-b
+    margin-right: 10px
+
+.user-img-link
+    display: block
+    width: 40px
+    height: 40px
+
+.user-txt-link
+    font-size: 16px
+    color: $user
+    font-family: $basic_font
+
+.user-img
+    border-radius: 4px

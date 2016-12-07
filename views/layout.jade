@@ -6,5 +6,10 @@ html(lang='en' ng-app='ServiceDirectoryModule')
 
     body
         include ./navbar
-        include ./content
-        script(src='/static/javascripts/index.js')
+        .wrapper
+            .container
+                include ./sidebar-left
+                include ./service-directory
+                include ./sidebar-right
+
+        script(src='/static/javascripts/index.min.js')

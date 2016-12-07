@@ -2,9 +2,7 @@
   "name": "service-directory",
   "version": "1.0.0",
   "scripts": {
-    "start": "node bin/server",
-    "watch:js": "gulp watch:js",
-    "watch:css": "gulp watch:css"
+    "start": "gulp uglify:js && gulp build:css && node bin/server"
   },
   "dependencies": {
     "angular": "^1.5.8",
