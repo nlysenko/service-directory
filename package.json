@@ -2,7 +2,9 @@
   "name": "service-directory",
   "version": "1.0.0",
   "scripts": {
-    "start": "gulp uglify:js && gulp build:css && node bin/server"
+    "start": "node bin/server",
+    "start:production": "gulp uglify:js && gulp clean:css && npm start",
+    "start:development": "gulp build:js && gulp build:css && npm start"
   },
   "dependencies": {
     "angular": "^1.5.8",
@@ -19,6 +21,7 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^2.3.2",
     "gulp-uglifyjs": "^0.6.2"
