@@ -10,19 +10,17 @@ ServiceDirectoryModule.controller('serviceDirectoryCtrl', ['$scope', '$http', fu
                 }
             }
         )
-        .success(function(response) {
-            if (response.success) {
-                $scope.services = response.data;
-            }
+        .then(function(response) {
+            $scope.services = response.data.data
         })
-        .error(function(response, status) {
-            if (status === 401) {
-                $scope.error.status = status;
-                $scope.error.description = response.error.description;
+        .catch(function(response) {
+            if (response.status === 401) {
+                $scope.error.status = response.status;
+                $scope.error.description = response.data.error.description;
                 document.location.href = "http://localhost:3000/#openModal";
-            } else if (status === 500) {
-                $scope.error.status = status;
-                $scope.error.description = response.error.description;
+            } else if (response.status === 500) {
+                $scope.error.status = response.status;
+                $scope.error.description = response.data.error.description;
                 document.location.href = "http://localhost:3000/#openModal";
             }
         });
