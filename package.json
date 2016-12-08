@@ -2,9 +2,16 @@
   "name": "service-directory",
   "version": "1.0.0",
   "scripts": {
-    "start": "node bin/server",
-    "start:production": "gulp uglify:js && gulp clean:css && npm start",
-    "start:development": "gulp build:js && gulp build:css && npm start"
+    "start": "npm run server:prod",
+    "server": "node bin/server",
+    "server:prod": "npm run uglify:js && npm run build:css:prod && npm run server",
+    "server:dev": "npm run build:js && npm run build:css && npm run server",
+    "build:js": "gulp build:js",
+    "uglify:js": "gulp uglify:js",
+    "watch:js": "gulp watch:js",
+    "build:css": "gulp build:css",
+    "build:css:prod": "gulp clean:css",
+    "watch:css": "gulp watch:css"
   },
   "dependencies": {
     "angular": "^1.5.8",
@@ -17,7 +24,7 @@
     "serve-favicon": "~2.3.0"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nikolai Lysenko",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",

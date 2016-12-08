@@ -4,7 +4,7 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    router = require('./routes/servise_directori_routes');
+    router = require('./routes/service_directory_routes');
 
 var app = express();
 
@@ -20,9 +20,7 @@ app.use(cookieParser());
 
 app.use('/', router);
 
-var server = http.createServer(app);
-
-server.listen(3000, function(err) {
+app.listen(3000, (err) => {
     if (!err) {
         console.log("Server listen on localhost:3000");
     } else {
