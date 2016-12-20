@@ -1,14 +1,6 @@
-.category(ng-controller='serviceDirectoryCtrl')
-    h1 Service Directory
-    button.new-service-btn Add New Service
-    ul.services
-        li.icon-block(ng-repeat='service in services')
-            a.service-link(href='#')
-                .icon
-                    img.icon-img(ng-src='{{ service.icon }}')
-                span.service-name(ng-bind='service.title')
-    #openModal.modalDialog
-        div
-            a.close(href='#close', title='Close') X
-            h2.error Error: {{ error.status }}
-            p.error-mes {{ error.description }}
+include ./templates/navbar
+.wrapper
+    .container
+        include ./templates/sidebar-left
+        include ./templates/service-directory
+        include ./templates/sidebar-right

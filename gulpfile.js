@@ -5,7 +5,9 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css');
 var jsSrc = [
     'node_modules/angular/angular.min.js',
+    'node_modules/angular-route/angular-route.min.js',
     'src/client/javascripts/app.js',
+    'src/client/javascripts/routes/route.js',
     'src/client/javascripts/controllers/get_user_controller.js',
     'src/client/javascripts/controllers/service_directory_controller.js',
     'src/client/javascripts/directives/adaptive_input.js'

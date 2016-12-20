@@ -1,1 +1,1 @@
-var ServiceDirectoryModule = angular.module('ServiceDirectoryModule', []);
+var ServiceDirectoryModule = angular.module('ServiceDirectoryModule', ['ngRoute']);
