@@ -1,0 +1,86 @@
+[
+    {
+        "title": "Accountancy",
+        "icon": "static/images/accountancy.png"
+    },
+    {
+        "title": "Associations",
+        "icon": "static/images/associations.png"
+    },
+    {
+        "title": "Buy/Sell Dental Practice",
+        "icon": "static/images/buy-sell.png"
+    },
+    {
+        "title": "Clinical Waste Collection",
+        "icon": "static/images/clinical-waste.png"
+    },
+    {
+        "title": "Computer Service",
+        "icon": "static/images/computer-service.png"
+    },
+    {
+        "title": "CPR/Basic Life Support Training",
+        "icon": "static/images/CPR.png"
+    },
+    {
+        "title": "Dental Recruitment",
+        "icon": "static/images/dental-recruitment.png"
+    },
+    {
+        "title": "Dental Software",
+        "icon": "static/images/dental-software.png"
+    },
+    {
+        "title": "Electrical Safety And Testing",
+        "icon": "static/images/electrical.png"
+    },
+    {
+        "title": "Marketing",
+        "icon": "static/images/marketing.png"
+    },
+    {
+        "title": "Others",
+        "icon": "static/images/others.png"
+    },
+    {
+        "title": "Repairs",
+        "icon": "static/images/repairs.png"
+    },
+    {
+        "title": "Solicitors",
+        "icon": "static/images/solicitors.png"
+    },
+    {
+        "title": "Surgery Design",
+        "icon": "static/images/surgery-design.png"
+    },
+    {
+        "title": "Training & Courses",
+        "icon": "static/images/training.png"
+    },
+    {
+        "title": "Web Designers",
+        "icon": "static/images/web.png"
+    },
+    {
+        "title": "Cleaning Agencies",
+        "icon": "static/images/cleaning-agencies.png"
+    },
+    {
+        "title": "Dental Chair Recovery",
+        "icon": "static/images/dental-chair.png"
+    },
+    {
+        "title": "Equipment Engineering",
+        "icon": "static/images/equipment.png"
+    },
+    {
+        "title": "Selling Gold",
+        "icon": "static/images/selling-gold.png"
+    },
+    {
+        "title": "Uniform & Workwear",
+        "icon": "static/images/workwear.png"
+    }
+]
