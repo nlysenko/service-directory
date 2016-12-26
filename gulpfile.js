@@ -10,6 +10,7 @@ var jsSrc = [
     'src/client/javascripts/routes/route.js',
     'src/client/javascripts/controllers/get_user_controller.js',
     'src/client/javascripts/controllers/service_directory_controller.js',
+    'src/client/javascripts/controllers/log_in_now_controller.js',
     'src/client/javascripts/directives/adaptive_input.js'
 ];
 

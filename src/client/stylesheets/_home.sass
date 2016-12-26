@@ -1,4 +1,4 @@
-.home-1
+.bg-img-1
     width: 100%
     height: 510px
     background: url('/static/images/bg-home-1.png') no-repeat
@@ -7,7 +7,7 @@
     width: 100%
     height: 80px
 
-.logo
+.logo-home
     float: left
     display: block
     width: 140px
@@ -55,12 +55,12 @@
     text-align: center
     color: $home-title
 
-.home-2
+.bg-img-2
     width: 100%
     height: 815px
     background: url('/static/images/bg-home-2.png') no-repeat
 
-.home-3
+.bg-img-3
     width: 100%
     height: 342px
 
@@ -118,7 +118,6 @@
     width: 100%
     height: 52px
     margin-top: 20px
-    background-color: rgb(135, 180, 72)
     font-size: 16px
     font-family: $basic_font
     color: $search
@@ -128,13 +127,6 @@
 
 .form-group
     margin: 17px 20px 0 20px
-
-.submit-btn:hover
-    cursor: pointer
-    color: #f3eeee
-    background: -webkit-linear-gradient(#089a17, #6bd88d)
-    background: -moz-linear-gradient(#089a17, #6bd88d)
-    background: -o-linear-gradient(#089a17, #6bd88d)
 
 .input-block
     width: 703px
@@ -207,3 +199,30 @@
     padding: 5px 15px
     font-size: 12px
     color: rgb(194, 194, 196)
+
+form[name="dentistForm"] .ng-valid.ng-dirty
+    background-color: #f2f2f7
+
+form[name="dentistForm"] .ng-invalid-required.ng-dirty
+    background-color: #babac1
+
+form[name="dentistForm"] .ng-invalid-email.ng-dirty
+    background-color: #babac1
+
+form[name="dentistForm"].ng-invalid .submit-btn
+    background-color: #e2d1d1
+
+form[name="dentistForm"].ng-valid .submit-btn
+    background-color: rgb(135, 180, 72)
+
+form[name="dentistForm"].ng-valid .submit-btn:hover
+    cursor: pointer
+    color: #f3eeee
+    background: -webkit-linear-gradient(#089a17, #6bd88d)
+    background: -moz-linear-gradient(#089a17, #6bd88d)
+    background: -o-linear-gradient(#089a17, #6bd88d)
+
+.image-btn
+    width: 130px
+    height: 130px
+    border-radius: 4px

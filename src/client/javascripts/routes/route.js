@@ -5,7 +5,8 @@ ServiceDirectoryModule.config( ['$routeProvider', '$locationProvider', '$httpPro
 
         $routeProvider
             .when('/', {
-                templateUrl: 'ajax/home/'
+                templateUrl: 'ajax/home/',
+                controller: 'logInNowCtrl'
             })
             .when('/service-directory', {
                 templateUrl: 'ajax/service-directory/'

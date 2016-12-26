@@ -1,48 +1,55 @@
-form.user-form
-    .form-inputs
+form.user-form(name='dentistForm', ng-submit='logInNow();', ng-if='dintistFormIsVisible', novalidate='')
+    .form-inputs(ng-style="dentist.type === 'Other' ? {'height': '745px'} : {'height': '672px'}")
         .form-group
             label.fields-marked Fields marked "*" are required
         .form-group
             label.marked Enquiry Type *
-            select.form-control.select-block(id='type')
-                option Other
-        .form-group(id='other_block')
-                input.form-control.input-block(id='other', placeholder='Other')
+            select.form-control.select-block(id='slect_type', name='enquiryType', ng-model='dentist.type',
+            ng-options='type for type in types', required='')
+        .form-group(id='other_block', ng-if="dentist.type === 'Other' ? true : false")
+                input.form-control.input-block(type='text', id='other_input', name='other', ng-model='dentist.other',
+                placeholder='Other', required='')
         .form-group
             .form-group-left
                 label.marked(for='name') Name *
-                input.form-control.input-sm(id='name', placeholder='Dentist')
+                input.form-control.input-sm(type='text', id='name_input', name='name', ng-model='dentist.name',
+                placeholder='Dentist', required='')
             .form-group-right
                 label.marked(for='email') Email *
-                input.form-control.input-sm(id='email', placeholder='rachelm@gmail.com')
+                input.form-control.input-sm(type='email', id='email_input', name='email', ng-model='dentist.email',
+                placeholder='rachelm@gmail.com', required='')
         .form-group
             label.marked Subject *
-            input.form-control.input-block(id='subject')
+            input.form-control.input-block(id='subject_input', name='subject', ng-model='dentist.subject', required='')
         .form-group
             label.marked Description *
-            label.index-length (0/1000)
-            textarea.descrpt(id='description', maxlength='1000')
+            label.index-length ({{ dentist.description.length ? dentist.description.length : 0 }}/1000)
+            textarea.descrpt(id='description', name='descript', ng-model='dentist.description', maxlength='1000',
+            ng-change='changeIndex();', required='')
         .form-group
             label.file-input-btn(for='file_input')
-                p.text-btn.photo-txt Add photo
-                p.text-btn.size-txt Minimum size of 300x300 jpeg ipg png 5 MB
-            input.file-input-hidden(type='file', id='file_input')
+                img.image-btn(ng-src='{{ dentist.img }}', ng-style="dentist.img ? {'width': '130px'} : {'display': 'none'}")
+                .text-btn(ng-if='textButtonIsVisible')
+                    p.photo-txt Add photo
+                    p.size-txt Minimum size of 300x300 jpeg ipg png 5 MB
+            input.file-input-hidden(type='file', id='file_input', name='file', accept='image/*', multiple='',
+            ng-model-instant='', onchange='angular.element(this).scope().imageUpload(event);')
     .form-btn
-        button.submit-btn(type='submit') Submit
+        button.submit-btn(type='submit', ng-disabled='dentistForm.$invalid') Submit
 .home-page
-    .home-1
+    .bg-img-1
         header.home-header
             .container-header
-                a.logo(href='#')
+                a.logo-home(href='#')
                     img(src='/static/images/logo.png')
                 .log-in-now
-                    button.log-in-now-btn Log In Now
+                    button.log-in-now-btn(ng-click='showDentizForm();') Log In Now
         .container
             .title
                 h1.home-h1 Home of Dentistry
                 p.home-info Denteez was created by dentists for dentistry in order to make the file of everyone involved in dentisty easier.
-    .home-2
-    .home-3
+    .bg-img-2
+    .bg-img-3
         .container
             .content-about-denteez
                 h2.about-denteez About Denteez
@@ -53,4 +60,3 @@ form.user-form
                     a.advertisement-link.active-link.link-right(href='#') Terms of use
                     a.advertisement-link.active-link.link-right(href='#') Privacy Policy
                     a.advertisement-link.active-link.link-right(href='#') Support
-
