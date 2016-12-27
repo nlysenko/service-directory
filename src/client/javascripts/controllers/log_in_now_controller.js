@@ -24,10 +24,23 @@ ServiceDirectoryModule.controller('logInNowCtrl', ['$scope', function($scope) {
         for (i = 0, files = event.target.files; i < files.length; i++) {
             reader = new FileReader();
             reader.onload = function(e) {
-                $scope.$apply(function() {
-                    $scope.dentist.img = e.target.result;
-                    $scope.textButtonIsVisible = false;
-                });
+                var img = document.createElement('img');
+
+                img.onload = function () {
+                    var width = this.width,
+                        height = this.height;
+
+                    if (e.loaded <= 5000000 && width > 300 && height > 300) {
+                        $scope.$apply(function() {
+                            $scope.dentist.img = e.target.result;
+                            $scope.textButtonIsVisible = false;
+                        });
+                    } else {
+                        alert('Select the correct photo!');
+                    }
+                };
+
+                img.src = e.target.result;
             };
             reader.readAsDataURL(files[i]);
         };
