@@ -32,8 +32,8 @@ form.user-form(name='dentistForm', ng-submit='logInNow();', ng-if='dintistFormIs
                 .text-btn(ng-if='textButtonIsVisible')
                     p.photo-txt Add photo
                     p.size-txt Minimum size of 300x300 jpeg ipg png 5 MB
-            input.file-input-hidden(type='file', id='file_input', name='file', accept='image/*', multiple='',
-            ng-model-instant='', onchange='angular.element(this).scope().imageUpload(event);')
+            input.file-input-hidden(type='file', id='file_input', name='file', accept='image/jpeg,image/ipg,image/png',
+            multiple='', ng-model-instant='', onchange='angular.element(this).scope().imageUpload(event);')
     .form-btn
         button.submit-btn(type='submit', ng-disabled='dentistForm.$invalid') Submit
 .home-page
