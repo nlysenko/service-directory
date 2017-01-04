@@ -8,4 +8,4 @@
    *In first Terminal: `npm run server:dev`*<br />
    *In second Terminal: `npm run watch:js`*<br />
    *In third Terminal: `npm run watch:css`*<br />
-5. See the project at `http://localhost:3000`
+5. See the project at `http://localhost:3000`, `http://localhost:3000/service-directory`
